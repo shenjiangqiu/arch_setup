@@ -14,8 +14,8 @@ pacman -S vim amd-ucode
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S yay
-yay -Fyy
-yay -S deepin  networkmanager  lightdm
+pacman -Fyy
+pacman -S deepin  networkmanager  lightdm
 systemctl enable lightdm 
 systemctl enable NetworkManager
-yay -S nginx aria2c-daemon webui-aria2 visual-studio-code-bin
+pacman -S nginx aria2c-daemon webui-aria2 visual-studio-code-bin
