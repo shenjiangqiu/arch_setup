@@ -8,6 +8,7 @@ echo LANG=en_US.UTF-8 > locale.conf
 systemctl enable dhcpcd
 systemctl start dhcpcd
 pacman -Syy
+pacman -S archlinuxcn-keyring
 pacman -S grub efibootmgr
 pacman -S vim amd-ucode
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
