@@ -1,3 +1,5 @@
+echo '[archlinuxcn]
+Server = https://mirror.xtom.com/archlinuxcn/$arch' >> /etc/pacman.conf
 ls -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc
 sed 's/#en_US.U/en_US.U/' /etc/locale.gen
