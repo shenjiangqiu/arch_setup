@@ -1,19 +1,19 @@
 timedatectl set-ntp true
 cfdisk
-"enter to continue"
+echo "enter to continue"
 read temp
-"format the partition"
+echo "format the partition"
 bash 
-"input the efi: "
+echo "input the efi: "
 read efi
-"input the root system: "
+echo "input the root system: "
 read root
-"mkfs.ext4 $root"
-"mkfs.fat -F32 $efi"
-"mount $root /mnt"
-"mkdir /mnt/boot"
-"mount $efi /mnt/boot"
-"echo "'Server = http://mirrors.lug.mtu.edu/archlinux/$repo/os/$arch'" >  /etc/pacman.d/mirrorlist"
+mkfs.ext4 $root
+mkfs.fat -F32 $efi
+mount $root /mnt
+mkdir /mnt/boot
+mount $efi /mnt/boot
+echo 'Server = http://mirrors.lug.mtu.edu/archlinux/$repo/os/$arch' >  /etc/pacman.d/mirrorlist
 echo '[archlinuxcn]
 Server = https://mirror.xtom.com/archlinuxcn/$arch' >> /etc/pacman.conf
 pacstrap /mnt base base-devel linux linux-firmware dhcpcd
