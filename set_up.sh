@@ -18,7 +18,7 @@ echo '[archlinuxcn]
 Server = https://mirror.xtom.com/archlinuxcn/$arch' >> /etc/pacman.conf
 echo "installing package to /mnt"
 pacman -Syy
-pacstrap /mnt base base-devel linux linux-firmware dhcpcd >/dev/null
+pacstrap /mnt base base-devel linux linux-firmware dhcpcd  wireless_tools iw wap_supplicant iwd netctl dialog ppp
 genfstab -U /mnt >> /mnt/etc/fstab
 cp  /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 echo "try arch-chroot /mnt"
