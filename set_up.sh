@@ -1,5 +1,4 @@
 timedatectl set-ntp true
-cfdisk
 echo "enter to continue"
 read temp
 echo "format the partition"
