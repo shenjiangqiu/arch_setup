@@ -4,7 +4,6 @@ sed -i 's/#en_US.U/en_US.U/' /etc/locale.gen
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 systemctl enable dhcpcd
-systemctl start dhcpcd
 read a
 ping google.com
 pacman -Syy
