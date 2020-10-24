@@ -18,7 +18,7 @@ echo '[archlinuxcn]
 Server = https://mirror.xtom.com/archlinuxcn/$arch' >> /etc/pacman.conf
 echo "installing package to /mnt"
 pacman -Syy
-pacstrap /mnt base  linux linux-firmware 
+pacstrap /mnt base  linux linux-firmware zsh bash-completion vim dhcpcd
 genfstab -U /mnt >> /mnt/etc/fstab
 cp  /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 cp /etc/pacman.conf /mnt/etc/pacman.conf
