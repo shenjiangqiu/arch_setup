@@ -1,4 +1,4 @@
-ls -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc
 sed -i 's/#en_US.U/en_US.U/' /etc/locale.gen
 locale-gen
