@@ -9,7 +9,7 @@ ping google.com
 pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S grub efibootmgr
-pacman -S vim amd-ucode 
+pacman -S vim amd-ucode os-prober
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S yay
