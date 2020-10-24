@@ -1,6 +1,7 @@
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc
 sed -i 's/#en_US.U/en_US.U/' /etc/locale.gen
+sed -i 's/#zh_CN.U/zh_CN.U/' /etc/locale.gen
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 systemctl enable dhcpcd
