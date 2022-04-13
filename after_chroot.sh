@@ -22,3 +22,4 @@ pacman -S iw
 
 echo "finished install.reboot and try to install other softwares"
 echo "remember to add your user! and add it to the wheel group to enable sudo access"
+echo "remember to uncomment using visudo!"
