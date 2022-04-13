@@ -5,7 +5,9 @@ sed -i 's/#zh_CN.U/zh_CN.U/' /etc/locale.gen
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 systemctl enable dhcpcd
+echo "press any to continue"
 read a
+echo "test network, prect ctrl-c to finish"
 ping google.com
 pacman -Syy
 pacman -S archlinuxcn-keyring archlinux-keyring
@@ -16,4 +18,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S yay
 pacman -Fyy
 pacman -S iw
+
+
 echo "finished install.reboot and try to install other softwares"
+echo "remember to add your user! and add it to the wheel group to enable sudo access"
